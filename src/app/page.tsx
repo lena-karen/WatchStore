@@ -29,7 +29,7 @@ const images = [
 const description =
   "A Seiko mod watch is a customized timepiece that combines the reliable craftsmanship of Seiko with unique, personalized modifications. These modifications can range from simple changes, like swapping out the bezel or the dial, to more complex overhauls involving the movement and case design. Enthusiasts often modify Seiko watches to create unique aesthetics that reflect their personal style, drawing inspiration from high-end luxury models, vintage designs, or completely original concepts. The modular nature of Seiko watches, particularly the SKX and 5 series, makes them ideal canvases for such creative endeavors.The allure of Seiko mod watches lies in the blend of practicality and individuality. These customizations not only enhance the watch's appearance but can also improve its functionality and durability. For instance, modders might upgrade the crystal to sapphire for better scratch resistance or replace the stock hands with luminescent ones for improved visibility. The result is a timepiece that maintains Seiko's renowned reliability and precision while standing out as a one-of-a-kind accessory. Whether you're an experienced watch enthusiast or new to the hobby, a Seiko mod watch offers a unique opportunity to own a personalized piece of horological art.";
 
-export default function page() {
+export default function MainPage() {
   const [selected, setSelected] = useState(images[0]);
 
   return (
