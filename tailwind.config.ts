@@ -18,6 +18,9 @@ module.exports = {
   		}
   	},
   	extend: {
+		screens: {
+			'xs': '450px',
+		},
   		colors: {
   			gold: '#FFD700',
   			border: 'hsl(var(--border))',

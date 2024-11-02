@@ -22,8 +22,6 @@ const images = [
   { id: "5", url: "/products/product5.webp" },
   { id: "6", url: "/products/product6.webp" },
   { id: "7", url: "/products/product7.webp" },
-  // {id: "7", url: "/products/product7.webp"},
-  // {id: "7", url: "/products/product7.webp"},
 ];
 
 const description =
@@ -34,7 +32,12 @@ export default function MainPage() {
 
   return (
     <section className="mx-4">
-      <Container size="4" align="center" mt="150px" mb="150px">
+      <Container
+        align="center"
+        mt="150px"
+        mb="150px"
+        className="max-w-2xl lg:max-w-6xl mx-auto"
+      >
         <Card>
           <Flex
             gap="6"
@@ -48,7 +51,7 @@ export default function MainPage() {
               direction="column"
               className="lg:min-h-[845px] lg:w-1/2 w-full"
             >
-              <Box className="flex-1 lg:px-4">
+              <Box className="flex items-center lg:flex-1 lg:px-4 h-[30rem] sm:h-[45rem]">
                 <Image
                   alt="product img"
                   width={575}
@@ -59,7 +62,7 @@ export default function MainPage() {
                 />
               </Box>
               <Box className="w-full">
-                <ScrollArea.Root className="mt-8 mx-4 px-4 w-full">
+                <ScrollArea.Root className="mt-8 w-full">
                   <ScrollArea.Viewport>
                     <Flex gap="2" className="">
                       {images.map((img) => (
@@ -98,7 +101,8 @@ export default function MainPage() {
                   mt="2"
                   mb="2"
                   align="center"
-                  className="flex flex-col sm:flex-row items-stretch sm:gap-6 gap-4"
+                  justify="between"
+                  className="flex flex-col xs:flex-row items-stretch sm:gap-6 gap-4"
                 >
                   <Flex align="end" className="gap-3 sm:gap-8">
                     <Text size="6" className="text-green-500">
@@ -108,7 +112,12 @@ export default function MainPage() {
                       $96999.00
                     </Text>
                   </Flex>
-                  <Flex gap="2" align="center">
+                  <Badge color="brown" variant="solid" radius="full" size="3">
+                    11% Off
+                  </Badge>
+                </Flex>
+                <Flex gap="2" align="center" justify="between" mt="3" mb="3">
+                  <Flex gap="4">
                     <svg
                       className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                       fill="currentColor"
@@ -118,22 +127,15 @@ export default function MainPage() {
                     </svg>
                     <Text className="text-gray-300">5.0 (5 reviews)</Text>
                   </Flex>
-                </Flex>
-
-                <Flex justify="between" className="my-4">
-                  <Badge color="brown" variant="solid" radius="full" size="3">
-                    11% Off
-                  </Badge>
                   <Badge color="green" variant="solid" radius="full" size="3">
                     In stock
                   </Badge>
                 </Flex>
-
                 <ScrollArea.Root
                   className="bg-gray-800 bg-opacity-50 px-4 h-[400px]"
                   type="always"
                 >
-                  <ScrollArea.Viewport className="h-[400px] p-2">
+                  <ScrollArea.Viewport className="h-[400px] pt-2 xs:p-2">
                     <Text size="3" className="text-white">
                       {description}
                     </Text>
